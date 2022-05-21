@@ -24,11 +24,10 @@ namespace API_Workshop
                         var con = services.GetRequiredService<DbxContext>();
                         con.Database.Migrate();
                         // Run Once Only On Start
-
-                        await Seed.SeedLocationAsync(con);
-                        await Seed.SeedDepartment(con);
-                        await Seed.SeedJobs(con);
-                        await Seed.SeedEmployees(con);
+                        // await Seed.SeedLocationAsync(con);
+                        // await Seed.SeedDepartment(con);
+                        // await Seed.SeedJobs(con);
+                        // await Seed.SeedEmployees(con);
                   }
                   catch (Exception ex)
                   {
