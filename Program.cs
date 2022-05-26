@@ -1,4 +1,5 @@
 using API_Workshop.Data;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -39,10 +40,10 @@ namespace API_Workshop
             }
 
             public static IHostBuilder CreateHostBuilder(string[] args) =>
-                Host.CreateDefaultBuilder(args)
-                    .ConfigureWebHostDefaults(webBuilder =>
-                    {
-                          webBuilder.UseStartup<Startup>();
-                    });
+                  Host.CreateDefaultBuilder(args)
+                        .ConfigureWebHostDefaults(webBuilder =>
+                        {
+                              webBuilder.UseStartup<Startup>();
+                        });
       }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API_Workshop.Data;
+using API_Workshop.DI;
 using API_Workshop.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,11 +15,11 @@ namespace API_Workshop.Controllers
       public class AppController : ControllerBase
       {
             public DbxContext _context { get; }
+
             public AppController(DbxContext context)
             {
                   _context = context;
             }
-
             [HttpGet("SelectAll")]
             public IActionResult SelectAll()
             {
